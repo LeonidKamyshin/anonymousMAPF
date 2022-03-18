@@ -4,3 +4,4 @@
  * Пример:
    * main.cpp ../examples/example3.xml ../examples/log3.xml
    * main.py ../examples/log3.xml ../examples/visualization3.gif
+ * В examples есть готовые карты с визуализацией
