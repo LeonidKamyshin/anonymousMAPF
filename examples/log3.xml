@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <map>
+        <width>4</width>
+        <height>4</height>
+        <startx>3 3 1</startx>
+        <starty>0 3 3</starty>
+        <finishx>1 0 0</finishx>
+        <finishy>0 0 1</finishy>
+        <grid>
+            <row>0 0 0 0</row>
+            <row>0 1 0 0</row>
+            <row>1 1 1 0</row>
+            <row>0 0 0 0</row>
+        </grid>
+    </map>
+    <algorithm>
+        <searchtype>astar</searchtype>
+        <metrictype>diagonal</metrictype>
+        <breakingties>g-max</breakingties>
+        <hweight>1</hweight>
+        <allowdiagonal>true</allowdiagonal>
+        <cutcorners>true</cutcorners>
+        <allowsqueeze>true</allowsqueeze>
+    </algorithm>
+    <options>
+        <loglevel>1</loglevel>
+        <logpath/>
+        <logfilename/>
+    </options>
+    <log>
+        <lplevel agent_id="1">
+            <node x="1" y="3" number="0"/>
+            <node x="1" y="3" number="1"/>
+            <node x="1" y="3" number="2"/>
+            <node x="1" y="3" number="3"/>
+            <node x="0" y="3" number="4"/>
+            <node x="0" y="2" number="5"/>
+            <node x="0" y="1" number="6"/>
+            <node x="0" y="0" number="7"/>
+            <node x="1" y="0" number="8"/>
+        </lplevel>
+        <lplevel agent_id="2">
+            <node x="3" y="3" number="0"/>
+            <node x="3" y="3" number="1"/>
+            <node x="3" y="3" number="2"/>
+            <node x="2" y="3" number="3"/>
+            <node x="1" y="3" number="4"/>
+            <node x="0" y="3" number="5"/>
+            <node x="0" y="2" number="6"/>
+            <node x="0" y="1" number="7"/>
+            <node x="0" y="0" number="8"/>
+        </lplevel>
+        <lplevel agent_id="3">
+            <node x="3" y="0" number="0"/>
+            <node x="3" y="1" number="1"/>
+            <node x="3" y="2" number="2"/>
+            <node x="3" y="3" number="3"/>
+            <node x="2" y="3" number="4"/>
+            <node x="1" y="3" number="5"/>
+            <node x="0" y="3" number="6"/>
+            <node x="0" y="2" number="7"/>
+            <node x="0" y="1" number="8"/>
+        </lplevel>
+    </log>
+</root>

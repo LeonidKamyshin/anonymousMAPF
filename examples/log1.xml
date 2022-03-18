@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <map>
+        <width>3</width>
+        <height>3</height>
+        <startx>2 2</startx>
+        <starty>0 2</starty>
+        <finishx>0 0</finishx>
+        <finishy>0 2</finishy>
+        <grid>
+            <row>0 0 0</row>
+            <row>0 0 1</row>
+            <row>0 0 0</row>
+        </grid>
+    </map>
+    <algorithm>
+        <searchtype>astar</searchtype>
+        <metrictype>diagonal</metrictype>
+        <breakingties>g-max</breakingties>
+        <hweight>1</hweight>
+        <allowdiagonal>true</allowdiagonal>
+        <cutcorners>true</cutcorners>
+        <allowsqueeze>true</allowsqueeze>
+    </algorithm>
+    <options>
+        <loglevel>1</loglevel>
+        <logpath/>
+        <logfilename/>
+    </options>
+    <log>
+        <lplevel agent_id="1">
+            <node x="2" y="0" number="0"/>
+            <node x="2" y="0" number="1"/>
+            <node x="2" y="0" number="2"/>
+            <node x="1" y="0" number="3"/>
+            <node x="0" y="0" number="4"/>
+        </lplevel>
+        <lplevel agent_id="2">
+            <node x="2" y="2" number="0"/>
+            <node x="2" y="1" number="1"/>
+            <node x="1" y="1" number="2"/>
+            <node x="0" y="1" number="3"/>
+            <node x="0" y="2" number="4"/>
+        </lplevel>
+    </log>
+</root>
