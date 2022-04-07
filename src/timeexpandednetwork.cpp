@@ -1,13 +1,16 @@
 #include <iostream>
 #include "timeexpandednetwork.h"
 
-TimeExpandedNetwork::TimeExpandedNetwork(const Map &_map, int _time)
-        : init_network(Network(_map)), time(_time) {
+TimeExpandedNetwork::TimeExpandedNetwork(const Map &_map, int _time, int _holdover_edge_cost)
+        : init_network(Network(_map))
+        , time(_time)
+        , holdover_edge_cost(_holdover_edge_cost)
+{
     TimeExpandedNetwork::buildTimeExpandedNetwork(_map);
 }
 
 void TimeExpandedNetwork::buildTimeExpandedNetwork(const Map &map) {
-    maxid = init_network.getNodes().size();
+    maxid = 1000000;
     for (auto node: init_network.getNodes()) {
         addIdleEdges(node.second);
     }
@@ -43,7 +46,9 @@ void TimeExpandedNetwork::addSuperSink(std::vector<int> finish_x, std::vector<in
 }
 
 void TimeExpandedNetwork::addEdge(int start, int end, int capacity, int cost) {
-    graph.emplace_back(Edge(start, end, capacity, cost));
+    graph.emplace_back(Edge(start, end, 0, capacity, cost));
+    maxid = std::max(maxid, start);
+    maxid = std::max(maxid, end);
 }
 
 int TimeExpandedNetwork::translateCoord(int _id, int _time) {
@@ -88,7 +93,12 @@ void TimeExpandedNetwork::addIdleEdges(int _node) {
     for (int timestep = 1; timestep <= 2 * time + 1; ++timestep) {
         int node_prev_timestep = translateCoord(_node, timestep - 1);
         int node_timestep = translateCoord(_node, timestep);
-        addEdge(node_prev_timestep, node_timestep, 1, (timestep - 1) % 2);
+        if((timestep-1)%2){
+            addEdge(node_prev_timestep, node_timestep, 1, holdover_edge_cost);
+        }
+        else{
+            addEdge(node_prev_timestep, node_timestep, 1, 0);
+        }
     }
 }
 
@@ -144,6 +154,10 @@ SearchResult TimeExpandedNetwork::convertPath(const std::vector<int> &path) {
         real_path.push_back(init_network.convertEdge(node));
     }
     return SearchResult(start.first, start.second, goal.first, goal.second, pathlen, real_path);
+}
+
+int TimeExpandedNetwork::getMaxEdgeId() {
+    return maxid;
 }
 
 

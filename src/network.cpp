@@ -34,7 +34,7 @@ int Network::translateCoord(int x, int y) {
 }
 
 void Network::addEdge(int start, int end) {
-    Network::graph.emplace_back(Edge(start, end, 0, 0));
+    Network::graph.emplace_back(Edge(start, end, 0, 0, 0));
 }
 
 std::vector<Edge> Network::getGraph() const {

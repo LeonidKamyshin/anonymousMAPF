@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <map>
+        <width>16</width>
+        <height>16</height>
+        <startx>14 14 14</startx>
+        <starty>1 7 14</starty>
+        <finishx>1 1 1</finishx>
+        <finishy>3 6 10</finishy>
+        <grid>
+            <row>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1</row>
+            <row>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1</row>
+            <row>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 1 1 1 0 1 1 1 1 1 1 1 1 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</row>
+        </grid>
+    </map>
+    <algorithm>
+        <objective>makespan</objective>
+    </algorithm>
+</root>

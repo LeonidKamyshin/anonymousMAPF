@@ -12,7 +12,7 @@
         #define TAG_GRID "grid"
             #define TAG_ROW "row"
     #define TAG_ALG "algorithm"
-        #define TAG_MT "metrictype"
+        #define TAG_MT "objective"
     #define TAG_LOG "log"
         #define TAG_LPLEVEL "lplevel"
         #define TAG_ATTR_AGENT_ID "agent_id"
@@ -21,10 +21,9 @@
                 #define TAG_ATTR_Y "y"
                 #define TAG_ATTR_NUMBER "number"
 
-#define TAG_MT_DIAG  "diagonal"
-#define TAG_MT_MANH  "manhattan"
-#define TAG_MT_EUCL  "euclidean"
-#define TAG_MT_CHEB  "chebyshev"
+#define TAG_MT_AVGTIME  "avg_time"
+#define TAG_MT_MAKESPAN  "makespan"
+#define TAG_MT_AVGDIST  "avg_distance"
 
 #define TAG_PATHSELECTION     "*"
 #define TAG_MATRIXSEPARATOR   ' '

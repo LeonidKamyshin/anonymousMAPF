@@ -1,29 +1,34 @@
 #include "maxflow.h"
 
-MaxFlowSolver::MaxFlowSolver(const std::vector<Edge>& edges, int _source, int _sink)
+MaxFlowSolver::MaxFlowSolver(const std::vector<Edge>& edges, int _source, int _sink, int _maxEdgeId)
     : s(_source)
     , t(_sink)
+    , maxEdgeId(_maxEdgeId)
 {
+    gr.resize(maxEdgeId);
+    dist.resize(maxEdgeId);
+    p.resize(maxEdgeId);
     for(auto edge:edges){
-        addEdge(edge.start, edge.end, edge.capacity);
+        addEdge(edge.start, edge.end, edge.capacity, edge.cost);
     }
 }
 
-void MaxFlowSolver::addEdge(int from, int to, int c)
+void MaxFlowSolver::addEdge(int from, int to, int c, int cost)
 {
-    MaxFlowEdge tmp(from,to,0,c);
+    Edge tmp(from, to, 0, c, cost);
     gr[from].push_back(e.size());
     e.push_back(tmp);
-    tmp.from = to;
-    tmp.to = from;
-    tmp.c = 0;
+    tmp.start = to;
+    tmp.end = from;
+    tmp.capacity = 0;
+    tmp.cost = cost;
     gr[to].push_back(e.size());
     e.push_back(tmp);
 }
 
 bool MaxFlowSolver::bfs()
 {
-    for(int i = 0; i < MAXN;i++){
+    for(int i = 0; i < maxEdgeId;i++){
         dist[i] = INF;
     }
     dist[s] = 0;
@@ -33,8 +38,8 @@ bool MaxFlowSolver::bfs()
         q.pop();
         for(int i = 0; i < gr[v].size();i++){
             int id = gr[v][i];
-            int cur = e[id].to;
-            if(dist[v] + 1 < dist[cur] && e[id].f + flow <= e[id].c){
+            int cur = e[id].end;
+            if(dist[v] + 1 < dist[cur] && e[id].flow + flow <= e[id].capacity){
                 dist[cur] = dist[v] + 1;
                 q.push(cur);
             }
@@ -46,11 +51,11 @@ bool MaxFlowSolver::dfs(int v)
 {
     for(; p[v] < gr[v].size();p[v]++){
         int id = gr[v][p[v]];
-        int cur = e[id].to;
-        if(dist[v] + 1 == dist[cur] && e[id].f + flow <= e[id].c){
+        int cur = e[id].end;
+        if(dist[v] + 1 == dist[cur] && e[id].flow + flow <= e[id].capacity){
             if(dfs(cur)){
-                e[id].f += flow;
-                e[id^1].f -= flow;
+                e[id].flow += flow;
+                e[id^1].flow -= flow;
                 return true;
             }
         }
@@ -61,10 +66,10 @@ bool MaxFlowSolver::dfs(int v)
 int MaxFlowSolver::Dinica()
 {
     int answer = 0;
-    flow = 1;
+    flow = 1e9;
     while(flow > 0){
         while(bfs()){
-            for(int i = 0; i <= MAXN;i++){
+            for(int i = 0; i < maxEdgeId;i++){
                 p[i] = 0;
             }
             while(dfs(s)){
@@ -76,6 +81,6 @@ int MaxFlowSolver::Dinica()
     return answer;
 }
 
-std::vector<MaxFlowEdge> MaxFlowSolver::getEdges() {
+std::vector<Edge> MaxFlowSolver::getEdges() {
     return e;
 }

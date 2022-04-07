@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <map>
+        <width>32</width>
+        <height>32</height>
+        <startx>30 30 30</startx>
+        <starty>1 7 30</starty>
+        <finishx>1 1 1</finishx>
+        <finishy>3 6 10</finishy>
+        <grid>
+            <row>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1</row>
+            <row>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</row>
+        </grid>
+    </map>
+    <algorithm>
+        <objective>makespan</objective>
+    </algorithm>
+    <log>
+        <lplevel agent_id="1">
+            <node x="30" y="1" number="0"/>
+            <node x="30" y="1" number="1"/>
+            <node x="30" y="1" number="2"/>
+            <node x="30" y="1" number="3"/>
+            <node x="30" y="1" number="4"/>
+            <node x="30" y="1" number="5"/>
+            <node x="30" y="1" number="6"/>
+            <node x="30" y="1" number="7"/>
+            <node x="30" y="1" number="8"/>
+            <node x="30" y="1" number="9"/>
+            <node x="30" y="1" number="10"/>
+            <node x="30" y="1" number="11"/>
+            <node x="30" y="1" number="12"/>
+            <node x="30" y="1" number="13"/>
+            <node x="30" y="1" number="14"/>
+            <node x="29" y="1" number="15"/>
+            <node x="28" y="1" number="16"/>
+            <node x="27" y="1" number="17"/>
+            <node x="26" y="1" number="18"/>
+            <node x="25" y="1" number="19"/>
+            <node x="24" y="1" number="20"/>
+            <node x="23" y="1" number="21"/>
+            <node x="22" y="1" number="22"/>
+            <node x="21" y="1" number="23"/>
+            <node x="20" y="1" number="24"/>
+            <node x="19" y="1" number="25"/>
+            <node x="18" y="1" number="26"/>
+            <node x="17" y="1" number="27"/>
+            <node x="16" y="1" number="28"/>
+            <node x="15" y="1" number="29"/>
+            <node x="14" y="1" number="30"/>
+            <node x="13" y="1" number="31"/>
+            <node x="12" y="1" number="32"/>
+            <node x="11" y="1" number="33"/>
+            <node x="10" y="1" number="34"/>
+            <node x="9" y="1" number="35"/>
+            <node x="8" y="1" number="36"/>
+            <node x="7" y="1" number="37"/>
+            <node x="6" y="1" number="38"/>
+            <node x="5" y="1" number="39"/>
+            <node x="4" y="1" number="40"/>
+            <node x="4" y="2" number="41"/>
+            <node x="4" y="3" number="42"/>
+            <node x="4" y="4" number="43"/>
+            <node x="4" y="5" number="44"/>
+            <node x="4" y="6" number="45"/>
+            <node x="4" y="7" number="46"/>
+            <node x="4" y="8" number="47"/>
+            <node x="3" y="8" number="48"/>
+            <node x="2" y="8" number="49"/>
+            <node x="1" y="8" number="50"/>
+            <node x="1" y="9" number="51"/>
+            <node x="1" y="9" number="52"/>
+            <node x="1" y="10" number="53"/>
+        </lplevel>
+        <lplevel agent_id="2">
+            <node x="30" y="7" number="0"/>
+            <node x="30" y="7" number="1"/>
+            <node x="30" y="7" number="2"/>
+            <node x="30" y="7" number="3"/>
+            <node x="30" y="7" number="4"/>
+            <node x="30" y="7" number="5"/>
+            <node x="30" y="7" number="6"/>
+            <node x="30" y="7" number="7"/>
+            <node x="30" y="7" number="8"/>
+            <node x="30" y="7" number="9"/>
+            <node x="30" y="7" number="10"/>
+            <node x="30" y="7" number="11"/>
+            <node x="30" y="7" number="12"/>
+            <node x="30" y="7" number="13"/>
+            <node x="30" y="7" number="14"/>
+            <node x="30" y="7" number="15"/>
+            <node x="30" y="7" number="16"/>
+            <node x="30" y="7" number="17"/>
+            <node x="30" y="7" number="18"/>
+            <node x="29" y="7" number="19"/>
+            <node x="28" y="7" number="20"/>
+            <node x="27" y="7" number="21"/>
+            <node x="26" y="7" number="22"/>
+            <node x="25" y="7" number="23"/>
+            <node x="24" y="7" number="24"/>
+            <node x="23" y="7" number="25"/>
+            <node x="22" y="7" number="26"/>
+            <node x="21" y="7" number="27"/>
+            <node x="20" y="7" number="28"/>
+            <node x="19" y="7" number="29"/>
+            <node x="18" y="7" number="30"/>
+            <node x="17" y="7" number="31"/>
+            <node x="16" y="7" number="32"/>
+            <node x="15" y="7" number="33"/>
+            <node x="14" y="7" number="34"/>
+            <node x="13" y="7" number="35"/>
+            <node x="12" y="7" number="36"/>
+            <node x="11" y="7" number="37"/>
+            <node x="10" y="7" number="38"/>
+            <node x="9" y="7" number="39"/>
+            <node x="8" y="7" number="40"/>
+            <node x="7" y="7" number="41"/>
+            <node x="6" y="7" number="42"/>
+            <node x="5" y="7" number="43"/>
+            <node x="4" y="7" number="44"/>
+            <node x="4" y="8" number="45"/>
+            <node x="3" y="8" number="46"/>
+            <node x="2" y="8" number="47"/>
+            <node x="1" y="8" number="48"/>
+            <node x="1" y="7" number="49"/>
+            <node x="1" y="6" number="50"/>
+            <node x="1" y="5" number="51"/>
+            <node x="1" y="4" number="52"/>
+            <node x="1" y="3" number="53"/>
+        </lplevel>
+        <lplevel agent_id="3">
+            <node x="30" y="30" number="0"/>
+            <node x="29" y="30" number="1"/>
+            <node x="28" y="30" number="2"/>
+            <node x="27" y="30" number="3"/>
+            <node x="26" y="30" number="4"/>
+            <node x="25" y="30" number="5"/>
+            <node x="24" y="30" number="6"/>
+            <node x="23" y="30" number="7"/>
+            <node x="22" y="30" number="8"/>
+            <node x="21" y="30" number="9"/>
+            <node x="20" y="30" number="10"/>
+            <node x="19" y="30" number="11"/>
+            <node x="18" y="30" number="12"/>
+            <node x="17" y="30" number="13"/>
+            <node x="16" y="30" number="14"/>
+            <node x="16" y="29" number="15"/>
+            <node x="16" y="28" number="16"/>
+            <node x="16" y="27" number="17"/>
+            <node x="16" y="26" number="18"/>
+            <node x="16" y="25" number="19"/>
+            <node x="16" y="24" number="20"/>
+            <node x="16" y="23" number="21"/>
+            <node x="16" y="22" number="22"/>
+            <node x="16" y="21" number="23"/>
+            <node x="16" y="20" number="24"/>
+            <node x="16" y="19" number="25"/>
+            <node x="16" y="18" number="26"/>
+            <node x="16" y="17" number="27"/>
+            <node x="16" y="16" number="28"/>
+            <node x="16" y="15" number="29"/>
+            <node x="16" y="14" number="30"/>
+            <node x="15" y="14" number="31"/>
+            <node x="14" y="14" number="32"/>
+            <node x="13" y="14" number="33"/>
+            <node x="12" y="14" number="34"/>
+            <node x="11" y="14" number="35"/>
+            <node x="10" y="14" number="36"/>
+            <node x="9" y="14" number="37"/>
+            <node x="8" y="14" number="38"/>
+            <node x="7" y="14" number="39"/>
+            <node x="6" y="14" number="40"/>
+            <node x="5" y="14" number="41"/>
+            <node x="4" y="14" number="42"/>
+            <node x="4" y="13" number="43"/>
+            <node x="4" y="12" number="44"/>
+            <node x="4" y="11" number="45"/>
+            <node x="4" y="10" number="46"/>
+            <node x="4" y="9" number="47"/>
+            <node x="4" y="8" number="48"/>
+            <node x="3" y="8" number="49"/>
+            <node x="2" y="8" number="50"/>
+            <node x="1" y="8" number="51"/>
+            <node x="1" y="7" number="52"/>
+            <node x="1" y="6" number="53"/>
+        </lplevel>
+    </log>
+</root>

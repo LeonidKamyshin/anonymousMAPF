@@ -1,7 +1,7 @@
 #ifndef ANONYMOUSMAPF_MAP_H
 #define ANONYMOUSMAPF_MAP_H
 #include <vector>
-
+#include <string>
 class Map {
 public:
     Map();
@@ -22,7 +22,8 @@ public:
 
     int getMapWidth() const;
 
-    int agents_count;
+    int agents_count, V;
+    std::string objective;
     std::vector<int> start_x, start_y, finish_x, finish_y;
 
 private:

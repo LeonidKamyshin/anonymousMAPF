@@ -42,14 +42,14 @@ void XmlLogger::writeToLogPaths(const std::vector<SearchResult> &paths)
     XMLElement *logTag = doc.FirstChildElement(TAG_ROOT);
     logTag = logTag->FirstChildElement(TAG_LOG);
 
-    for(int i = 0; i < paths.size(); ++i){
+    for(int64_t i = 0; i < paths.size(); ++i){
         XMLElement *element = doc.NewElement(TAG_LPLEVEL);
         element->SetAttribute(TAG_ATTR_AGENT_ID, i+1);
         for(int j = 0; j < paths[i].path.size(); ++j){
             XMLElement *cur_element = doc.NewElement(TAG_NODE);
-            cur_element->SetAttribute(TAG_ATTR_X, paths[i].path[j].first);
-            cur_element->SetAttribute(TAG_ATTR_Y, paths[i].path[j].second);
-            cur_element->SetAttribute(TAG_ATTR_NUMBER, j);
+            cur_element->SetAttribute(TAG_ATTR_X, static_cast<int64_t>(paths[i].path[j].first));
+            cur_element->SetAttribute(TAG_ATTR_Y, static_cast<int64_t>(paths[i].path[j].second));
+            cur_element->SetAttribute(TAG_ATTR_NUMBER, static_cast<int64_t>(j));
             element->InsertEndChild(cur_element);
         }
         logTag->InsertEndChild(element);

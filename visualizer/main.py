@@ -25,12 +25,12 @@ class Drawer:
     def draw_grid(self):
         for i in range(self.width + 1):
             cv2.line(self.canvas, (self.scale // 2, i * self.scale + self.scale // 2),
-                     (self.width * self.scale + self.scale // 2, i * self.scale + self.scale // 2), thickness=1,
+                     (self.height * self.scale + self.scale // 2, i * self.scale + self.scale // 2), thickness=1,
                      color=(0, 0, 0))
 
         for i in range(self.height + 1):
             cv2.line(self.canvas, (i * self.scale + self.scale // 2, self.scale // 2),
-                     (i * self.scale + self.scale // 2, self.height * self.scale + self.scale // 2), thickness=1,
+                     (i * self.scale + self.scale // 2, self.width * self.scale + self.scale // 2), thickness=1,
                      color=(0, 0, 0))
 
     def draw_obstacles(self):

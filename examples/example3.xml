@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <root>
     <map>
-        <width>4</width>
-        <height>4</height>
+        <width>16</width>
+        <height>8</height>
         <startx>3 3 1</startx>
         <starty>0 3 3</starty>
         <finishx>1 0 0</finishx>
         <finishy>0 0 1</finishy>
         <grid>
-            <row>0 0 0 0</row>
-            <row>0 1 0 0</row>
-            <row>1 1 1 0</row>
-            <row>0 0 0 0</row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
+            <row>0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
+            <row>1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
+            <row>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</row>
 
         </grid>
     </map>
     <algorithm>
-        <searchtype>astar</searchtype>
-        <metrictype>diagonal</metrictype>
-        <breakingties>g-max</breakingties>
-        <hweight>1</hweight>
-        <allowdiagonal>true</allowdiagonal>
-        <cutcorners>true</cutcorners>
-        <allowsqueeze>true</allowsqueeze>
+        <objective>avg_time</objective>
     </algorithm>
-    <options>
-        <loglevel>1</loglevel>
-        <logpath />
-        <logfilename />
-    </options>
 </root>

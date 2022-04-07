@@ -13,6 +13,8 @@ Map::Map()
 {
     height = -1;
     width = -1;
+    V = 0;
+    agents_count = 0;
     Grid = nullptr;
 }
 
@@ -44,7 +46,7 @@ bool Map::loadMap(const char *FileName)
 {
     int rowiter = 0, grid_i = 0, grid_j = 0;
 
-    tinyxml2::XMLElement *root = 0, *map = 0, *element = 0, *mapnode;
+    tinyxml2::XMLElement *root = 0, *map = 0, *algorithm = 0, *element = 0, *mapnode, *algorithmnode;
 
     std::string value;
     std::stringstream stream;
@@ -233,6 +235,7 @@ bool Map::loadMap(const char *FileName)
                         stream << elems[grid_j];
                         stream >> val;
                         Grid[grid_i][grid_j] = val;
+                        V += 1-val;
                     }
 
                 if (grid_j != width) {
@@ -243,6 +246,27 @@ bool Map::loadMap(const char *FileName)
                 ++grid_i;
 
                 element = element->NextSiblingElement();
+            }
+        }
+
+        algorithm = root->FirstChildElement(TAG_ALG);
+        if (!algorithm) {
+            std::cout << "Error! No '" << TAG_ALG << "' tag found in XML file!" << std::endl;
+            return false;
+        }
+
+        for (algorithmnode = algorithm->FirstChildElement(); algorithmnode; algorithmnode = algorithmnode->NextSiblingElement()) {
+            element = algorithmnode->ToElement();
+            value = algorithmnode->Value();
+            std::transform(value.begin(), value.end(), value.begin(), ::tolower);
+
+            stream.str("");
+            stream.clear();
+
+            stream << element->GetText();
+
+            if(value == TAG_MT){
+                stream >> objective;
             }
         }
     }

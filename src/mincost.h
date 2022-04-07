@@ -1,5 +1,5 @@
-#ifndef ANONYMOUSMAPF_MAXFLOW_H
-#define ANONYMOUSMAPF_MAXFLOW_H
+#ifndef ANONYMOUSMAPF_MINCOST_H
+#define ANONYMOUSMAPF_MINCOST_H
 
 #include <iostream>
 #include <cstdio>
@@ -25,31 +25,24 @@
 
 #include "edge.h"
 
-using namespace std;
-
-class MaxFlowSolver {
+class MinCostSolver {
 public:
-    MaxFlowSolver(const std::vector<Edge> &edges, int _source, int _sink, int _maxEdgeId);
-
-    int Dinica();
-
+    MinCostSolver(const std::vector<Edge> &edges, int _source, int _sink, int _maxEdgeId);
+    int minCost();
     std::vector<Edge> getEdges();
 
 private:
     void addEdge(int from, int to, int c, int cost);
-
-    bool bfs();
-
-    bool dfs(int v);
+    void fordBellman();
+    bool dijstra();
 
     static const int INF = 1e9;
     int maxEdgeId;
     std::vector<Edge> e;
-    std::vector<vector<int>> gr;
+    std::vector<std::vector<int>> gr;
     int s, t, flow;
-    std::vector<int> dist, p;
-    queue<int> q;
-
+    std::vector<int> dist, phi, par;
+    std::priority_queue<std::pair<int, int>> q;
 };
 
-#endif //ANONYMOUSMAPF_MAXFLOW_H
+#endif //ANONYMOUSMAPF_MINCOST_H

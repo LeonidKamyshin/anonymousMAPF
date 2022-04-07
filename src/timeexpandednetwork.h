@@ -8,7 +8,7 @@
 
 class TimeExpandedNetwork {
 public:
-    TimeExpandedNetwork(const Map &_map, int _time);
+    TimeExpandedNetwork(const Map &_map, int _time, int _holdover_edge_cost);
 
     void addSuperSource(std::vector<int> start_x, std::vector<int> start_y);
 
@@ -21,6 +21,8 @@ public:
     int getSink();
 
     int getTime();
+
+    int getMaxEdgeId();
 
     std::vector<Edge> getEdges();
 
@@ -42,7 +44,7 @@ private:
     void addIdleEdges(int _node);
 
     Network init_network;
-    int time, source, sink, maxid;
+    int time, source, sink, maxid, holdover_edge_cost;
     std::map<std::pair<int, int>, int> time_translations;
     std::unordered_map<int, std::pair<int,int>> node_reverse_translations;
     std::map<std::pair<int, int>, int> outgoing_fictive_nodes;
