@@ -16,7 +16,7 @@ std::vector<SearchResult> AnonymousMAPF::search(const Map &map) {
         return searchMakespanObjective(map);
     }
     else if(map.objective == TAG_MT_AVGDIST){
-        searchAvgDistanceObjective(map);
+        return searchAvgDistanceObjective(map);
     }
     return vector<SearchResult>();
 }
@@ -118,10 +118,32 @@ std::vector<SearchResult> AnonymousMAPF::retrievePath(const vector<Edge> &edges,
         lastNode = curNode;
     }
 
+    // Отсекаем начало в случаях когда все агенты стоят на месте
+    int min_idx = 1e9;
+    for(int i = 0; i < paths.size(); ++i){
+        min_idx = std::min(static_cast<int>(paths[i].size()), min_idx);
+    }
+    int start_idx = 0;
+    bool idle = true;
+    for(int i = 1 ; i < min_idx && idle; ++i){
+        for(int j = 0; j < paths.size(); ++j){
+            if(paths[j][i] != paths[j][i-1]){
+                start_idx = i;
+                idle = false;
+                break;
+            }
+        }
+    }
+    for(int j = 0; j < paths.size(); ++j){
+        paths[j] = std::vector<int>(paths[j].begin() + start_idx, paths[j].end());
+    }
+
     std::vector<SearchResult> answer;
     for (int i = 0; i < paths.size(); ++i) {
         answer.push_back(network.convertPath(paths[i]));
     }
+
+
     return answer;
 }
 

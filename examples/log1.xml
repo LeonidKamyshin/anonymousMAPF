@@ -14,7 +14,22 @@
         </grid>
     </map>
     <algorithm>
-        <objective>avg_distance</objective>
+        <objective>avg_time</objective>
     </algorithm>
-    <log/>
+    <log>
+        <lplevel agent_id="1">
+            <node x="2" y="0" number="0"/>
+            <node x="2" y="0" number="1"/>
+            <node x="2" y="0" number="2"/>
+            <node x="1" y="0" number="3"/>
+            <node x="0" y="0" number="4"/>
+        </lplevel>
+        <lplevel agent_id="2">
+            <node x="2" y="2" number="0"/>
+            <node x="2" y="1" number="1"/>
+            <node x="1" y="1" number="2"/>
+            <node x="0" y="1" number="3"/>
+            <node x="0" y="2" number="4"/>
+        </lplevel>
+    </log>
 </root>

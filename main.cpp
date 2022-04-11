@@ -1,5 +1,6 @@
 #include <iostream>
 #include <map>
+#include <chrono>
 #include "src/map.h"
 #include "src/anonymousMAPF.h"
 #include "src/xmllogger.h"
@@ -9,7 +10,7 @@ int main(int argc, char* argv[]) {
         std::cout<<"Error! Pathfinding task file (XML) is not specified!"<<std::endl;
         return 0;
     }
-
+    auto startTime = std::chrono::system_clock::now();
     Map map;
     map.loadMap(argv[1]);
     for(int i = 0; i < map.getMapHeight(); i++){
@@ -33,5 +34,7 @@ int main(int argc, char* argv[]) {
     logger.getLog(argv[1]);
     logger.writeToLogPaths(res);
     logger.saveLog();
+    auto endTime = std::chrono::system_clock::now();
+    std::cout << "Took time: " << std::chrono::duration<double>(endTime-startTime).count() << '\n';
     return 0;
 }
