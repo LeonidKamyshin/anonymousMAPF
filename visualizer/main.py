@@ -11,7 +11,7 @@ from xmltodict3 import XmlTextToDict
 
 class Drawer:
     def __init__(self, paths, obstacles, width, height):
-        self.canvas = np.ones((1080, 1920, 3), np.uint8) * 255
+        self.canvas = np.ones((1080*3, 1920*3, 3), np.uint8) * 255
         self.paths = paths
         self.obstacles = obstacles
         self.width = width
