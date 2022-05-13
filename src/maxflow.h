@@ -31,7 +31,7 @@ class MaxFlowSolver {
 public:
     MaxFlowSolver(const std::vector<Edge> &edges, int _source, int _sink, int _maxEdgeId);
 
-    int Dinica();
+    int MaxFlow();
 
     std::vector<Edge> getEdges();
 
@@ -49,7 +49,6 @@ private:
     int s, t, flow;
     std::vector<int> dist, p;
     queue<int> q;
-
 };
 
 #endif //ANONYMOUSMAPF_MAXFLOW_H

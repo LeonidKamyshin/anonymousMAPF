@@ -5,6 +5,24 @@
 #include "src/anonymousMAPF.h"
 #include "src/xmllogger.h"
 
+void testing(){
+    for(int i = 1; i <= 80; ++i){
+        auto startTime = std::chrono::system_clock::now();
+        Map map;
+        std::string path ="../tests/" + std::to_string(i) + ".xml";
+        map.loadMap(const_cast<char*>(path.c_str()));
+        AnonymousMAPFSolver alg;
+        auto res = alg.search(map);
+
+        XmlLogger logger("../log1.xml");
+        logger.getLog(const_cast<char*>(path.c_str()));
+        logger.writeToLogPaths(res);
+        logger.saveLog();
+        auto endTime = std::chrono::system_clock::now();
+        std::cout << "Took time for test " << i << ": " << std::chrono::duration<double>(endTime-startTime).count() << '\n';
+    }
+}
+
 int main(int argc, char* argv[]) {
     if(argc < 3) {
         std::cout<<"Error! Pathfinding task file (XML) is not specified!"<<std::endl;
@@ -20,7 +38,7 @@ int main(int argc, char* argv[]) {
         std::cout << '\n';
     }
     std::cout << "success" << '\n';
-    AnonymousMAPF alg;
+    AnonymousMAPFSolver alg;
     auto res = alg.search(map);
     int index = 0;
     for(auto path:res){

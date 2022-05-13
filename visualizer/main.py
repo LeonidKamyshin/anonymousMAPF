@@ -1,3 +1,4 @@
+import time
 from copy import deepcopy
 from typing import Tuple, List
 
@@ -7,7 +8,7 @@ import cv2
 import numpy as np
 from PIL import Image
 from xmltodict3 import XmlTextToDict
-
+from timeit import default_timer as timer
 
 class Drawer:
     def __init__(self, paths, obstacles, width, height):
@@ -84,6 +85,7 @@ class Drawer:
 
 
 def main():
+    start = timer()
     xml_file_path = os.path.join(os.path.dirname(__file__), sys.argv[1])
     gif_file_path = os.path.join(os.path.dirname(__file__), sys.argv[2])
     with open(xml_file_path, 'r') as f:
@@ -96,6 +98,8 @@ def main():
     drawer = Drawer(paths, obstacles, *parseSize(xml))
     drawer.start()
     drawer.save_gif(gif_file_path, 450)
+    end = timer()
+    print(f"Прошло {end - start} секунд")
 
 
 def parsePaths(xml) -> List[List[Tuple[int, int]]]:

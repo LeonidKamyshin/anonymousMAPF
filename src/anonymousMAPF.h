@@ -7,15 +7,14 @@
 #include "edge.h"
 #include "timeexpandednetwork.h"
 
-class AnonymousMAPF {
+class AnonymousMAPFSolver {
 public:
     std::vector<SearchResult> search(const Map& map);
 
 private:
     std::vector<SearchResult> retrievePath(const std::vector<Edge>& edges, TimeExpandedNetwork& network);
 
-    std::vector<SearchResult> searchMakespanObjective(const Map& map);
-    std::vector<SearchResult> searchAvgTimeObjective(const Map& map);
+    std::vector<SearchResult> searchTimespanObjective(const Map& map);
     std::vector<SearchResult> searchAvgDistanceObjective(const Map &map);
 
     int getL(const Map& map);

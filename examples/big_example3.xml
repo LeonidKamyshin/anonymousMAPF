@@ -111,6 +111,6 @@
         </grid>
     </map>
     <algorithm>
-        <objective>makespan</objective>
+        <objective>avg_distance</objective>
     </algorithm>
 </root>

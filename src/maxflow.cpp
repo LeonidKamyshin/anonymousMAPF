@@ -63,7 +63,7 @@ bool MaxFlowSolver::dfs(int v)
     return v == t;
 }
 
-int MaxFlowSolver::Dinica()
+int MaxFlowSolver::MaxFlow()
 {
     int answer = 0;
     flow = 1e9;
