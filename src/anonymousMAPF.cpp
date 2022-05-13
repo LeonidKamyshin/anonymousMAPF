@@ -34,8 +34,10 @@ std::vector<SearchResult> AnonymousMAPFSolver::searchTimespanObjective(const Map
     TimeExpandedNetwork network = TimeExpandedNetwork(map, L, 1);
     MaxFlowSolver max_flow_solver = MaxFlowSolver(network.getEdges(), network.getSource(), network.getSink(),
                                                   network.getMaxEdgeId() + 1);
-//    std::cout << "Makespan is: " << L << '\n';
-//    std::cout << "Agents found destination: " << max_flow_solver.MaxFlow() << '\n';
+    if (max_flow_solver.MaxFlow() != map.agents_count){
+        std::cout << "No solution" << '\n';
+        return vector<SearchResult>();
+    }
     return retrievePath(max_flow_solver.getEdges(), network);
 }
 
@@ -44,14 +46,17 @@ std::vector<SearchResult> AnonymousMAPFSolver::searchAvgDistanceObjective(const 
     TimeExpandedNetwork network = TimeExpandedNetwork(map, T, 0);
     MinCostSolver min_cost_solver = MinCostSolver(network.getEdges(), network.getSource(), network.getSink(),
                                                   network.getMaxEdgeId() + 1);
-//    std::cout << "Total cost is:" << min_cost_solver.minCost() << '\n';
+    min_cost_solver.minCost();
     int reached = 0;
     for(auto &edge:min_cost_solver.getEdges()){
         if(edge.end == network.getSink() && edge.flow == 1){
             reached += 1;
         }
     }
-//    std::cout << "Agents found path: " << reached << '\n';
+    if (reached != map.agents_count){
+        std::cout << "No solution" << '\n';
+        return vector<SearchResult>();
+    }
     return retrievePath(min_cost_solver.getEdges(), network);
 }
 

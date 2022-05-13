@@ -43,7 +43,7 @@
         </grid>
     </map>
     <algorithm>
-        <objective>avg_distance</objective>
+        <objective>makespan</objective>
     </algorithm>
     <log>
         <lplevel agent_id="1">

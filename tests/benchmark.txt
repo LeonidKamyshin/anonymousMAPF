@@ -1,80 +1,80 @@
-Took time for test 1: 18.4024
-Took time for test 2: 21.2891
-Took time for test 3: 15.9991
-Took time for test 4: 21.9007
-Took time for test 5: 25.2228
-Took time for test 6: 24.746
-Took time for test 7: 28.4111
-Took time for test 8: 26.9551
-Took time for test 9: 32.4259
-Took time for test 10: 72.7034
-Took time for test 11: 13.0683
-Took time for test 12: 11.7944
-Took time for test 13: 11.4503
-Took time for test 14: 10.0686
-Took time for test 15: 11.5345
-Took time for test 16: 11.6645
-Took time for test 17: 14.1539
-Took time for test 18: 13.771
-Took time for test 19: 15.3668
-Took time for test 20: 16.6675
-Took time for test 21: 23.356
-Took time for test 22: 29.3699
-Took time for test 23: 32.3688
-Took time for test 24: 26.1303
-Took time for test 25: 30.0904
-Took time for test 26: 31.4689
-Took time for test 27: 36.1952
-Took time for test 28: 30.2794
-Took time for test 29: 33.7331
-Took time for test 30: 36.48
-Took time for test 31: 21.608
-Took time for test 32: 22.7137
-Took time for test 33: 17.9006
-Took time for test 34: 24.4032
-Took time for test 35: 23.667
-Took time for test 36: 28.0524
-Took time for test 37: 32.3011
-Took time for test 38: 34.1588
-Took time for test 39: 38.7678
-Took time for test 40: 39.9879
-Took time for test 41: 5.50672
-Took time for test 42: 5.92681
-Took time for test 43: 6.41836
-Took time for test 44: 7.00637
-Took time for test 45: 7.72886
-Took time for test 46: 8.63137
-Took time for test 47: 9.50275
-Took time for test 48: 10.4314
-Took time for test 49: 11.4264
-Took time for test 50: 12.6338
-Took time for test 51: 4.48318
-Took time for test 52: 4.77169
-Took time for test 53: 5.0012
-Took time for test 54: 5.2682
-Took time for test 55: 5.87807
-Took time for test 56: 6.62212
-Took time for test 57: 7.05999
-Took time for test 58: 7.51894
-Took time for test 59: 8.31485
-Took time for test 60: 8.90815
-Took time for test 61: 9.00702
-Took time for test 62: 9.98014
-Took time for test 63: 11.0115
-Took time for test 64: 12.1828
-Took time for test 65: 13.3586
-Took time for test 66: 14.6554
-Took time for test 67: 16.5169
-Took time for test 68: 17.9848
-Took time for test 69: 19.7175
-Took time for test 70: 21.6041
-Took time for test 71: 5.50078
-Took time for test 72: 5.96926
-Took time for test 73: 6.50704
-Took time for test 74: 6.99689
-Took time for test 75: 7.97239
-Took time for test 76: 8.92483
-Took time for test 77: 9.77836
-Took time for test 78: 10.6087
-Took time for test 79: 11.7344
-Took time for test 80: 12.9161
+Test #1: 18.453
+Test #2: 21.5406
+Test #3: 16.1922
+Test #4: 24.0131
+Test #5: 27.8184
+Test #6: 27.3062
+Test #7: 31.618
+Test #8: 30.3356
+Test #9: 36.7527
+Test #10: 93.3103
+Test #11: 12.3356
+Test #12: 10.8363
+Test #13: 10.3539
+Test #14: 8.50184
+Test #15: 10.6034
+Test #16: 10.8545
+Test #17: 13.6665
+Test #18: 13.1697
+Test #19: 15.4781
+Test #20: 16.862
+Test #21: 23.7372
+Test #22: 32.3161
+Test #23: 36.3787
+Test #24: 28.3938
+Test #25: 33.0857
+Test #26: 34.7398
+Test #27: 42.741
+Test #28: 32.9401
+Test #29: 37.6174
+Test #30: 40.261
+Test #31: 21.8465
+Test #32: 23.4296
+Test #33: 18.2616
+Test #34: 25.7295
+Test #35: 25.5868
+Test #36: 31.7745
+Test #37: 36.8489
+Test #38: 39.3145
+Test #39: 44.0946
+Test #40: 45.8854
+Test #41: 6.29438
+Test #42: 8.39402
+Test #43: 11.8836
+Test #44: 15.9597
+Test #45: 20.8596
+Test #46: 26.2241
+Test #47: 31.9446
+Test #48: 38.2747
+Test #49: 45.6968
+Test #50: 52.0915
+Test #51: 4.28326
+Test #52: 6.14999
+Test #53: 8.19588
+Test #54: 10.7227
+Test #55: 14.5851
+Test #56: 18.9718
+Test #57: 23.0336
+Test #58: 27.1958
+Test #59: 32.8764
+Test #60: 37.7349
+Test #61: 14.197
+Test #62: 20.2132
+Test #63: 27.2611
+Test #64: 35.801
+Test #65: 45.2884
+Test #66: 56.0751
+Test #67: 68.9429
+Test #68: 80.8057
+Test #69: 94.9621
+Test #70: 109.817
+Test #71: 7.00814
+Test #72: 9.28907
+Test #73: 12.321
+Test #74: 14.6021
+Test #75: 18.4607
+Test #76: 23.0752
+Test #77: 27.8001
+Test #78: 33.2485
+Test #79: 38.9113
+Test #80: 45.0977

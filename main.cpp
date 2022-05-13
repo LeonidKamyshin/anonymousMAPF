@@ -19,7 +19,7 @@ void testing(){
         logger.writeToLogPaths(res);
         logger.saveLog();
         auto endTime = std::chrono::system_clock::now();
-        std::cout << "Took time for test " << i << ": " << std::chrono::duration<double>(endTime-startTime).count() << '\n';
+        std::cout << "Test #" << i << ": " << std::chrono::duration<double>(endTime-startTime).count() << '\n';
     }
 }
 
@@ -31,28 +31,16 @@ int main(int argc, char* argv[]) {
     auto startTime = std::chrono::system_clock::now();
     Map map;
     map.loadMap(argv[1]);
-    for(int i = 0; i < map.getMapHeight(); i++){
-        for(int j = 0; j < map.getMapWidth(); ++j){
-            std::cout << !map.CellIsTraversable(i, j) << " ";
-        }
-        std::cout << '\n';
-    }
-    std::cout << "success" << '\n';
     AnonymousMAPFSolver alg;
     auto res = alg.search(map);
-    int index = 0;
-    for(auto path:res){
-        std::cout << "Index is: " << index << '\n';
-        ++index;
-        for(auto coord:path.path){
-            std::cout << coord.first << " " << coord.second << '\n';
-        }
+    if(!res.empty()){
+        std::cout << "Success" << '\n';
+        XmlLogger logger(argv[2]);
+        logger.getLog(argv[1]);
+        logger.writeToLogPaths(res);
+        logger.saveLog();
     }
-    XmlLogger logger(argv[2]);
-    logger.getLog(argv[1]);
-    logger.writeToLogPaths(res);
-    logger.saveLog();
     auto endTime = std::chrono::system_clock::now();
-    std::cout << "Took time: " << std::chrono::duration<double>(endTime-startTime).count() << '\n';
+    std::cout << "Took time: " << std::chrono::duration<double>(endTime-startTime).count() << " seconds \n";
     return 0;
 }
