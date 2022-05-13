@@ -1,0 +1,13 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+        "type": "default",
+        "project": "CMakeLists.txt",
+        "projectTarget": "",
+        "args": [ "../../examples/example3.xml", "../../examples/log3.xml" ],
+        "name": "CMakeLists.txt"
+    }
+  ]
+}
