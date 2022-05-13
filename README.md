@@ -9,5 +9,5 @@
   * main.cpp ../examples/example3.xml ../examples/log3.xml
   * python visualizer/main.py ../examples/log3.xml ../examples/visualization3.gif
 
-Перед запуском визуализатора надо прописать команду pip install -r visualizer/main.py
+Перед запуском визуализатора надо прописать команду pip install -r visualizer/requirements.txt
 #### В examples есть готовые карты с визуализацией 
