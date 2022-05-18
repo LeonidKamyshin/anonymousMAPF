@@ -19,10 +19,15 @@ public:
 
     void saveLog();
 
+    void saveLog(const char *FileName);
+
     void writeToLogPaths(const std::vector<SearchResult> &paths);
 
-    void writeToLogNotFound();
+    void writeStart(const std::vector<int>& x, const std::vector<int>& y);
 
+    void writeFinish(const std::vector<int>& x, const std::vector<int>& y);
+
+    void writeObjective(const std::string objective);
 private:
     std::string LogFileName;
     tinyxml2::XMLDocument doc;
